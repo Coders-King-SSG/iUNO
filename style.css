@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    color:#fee8d6;
+    background-color: rgb(25, 40, 65);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #fee8d6 3px solid;
+    height: 20%!important;
+}
+
+header img {
+    margin-left: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+header h1 {
+    font-size:30px;
+}
+
+.input-t {
+    padding: 5px 15px 5px 15px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    width: 80%;
+    border: 2px solid #666;
+}
+
+#upload_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    background-color: #fee8d6;
+    color:rgb(25, 40, 65);
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0px!important;
+    width: 65%;
+    height: 65%;
+}
+
+main {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+}
+
+#captcha_text {
+    font-family: 'Limelight', cursive;
+}
+
+#btn {
+    background:rgb(105, 184, 86);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 30px;
+    color: #fee8d6;
+    border-color: rgb(79, 138, 65);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iUNO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="splash()">
+    <center>
+        <div id="login-div">
+            <header>
+                <h1>
+                    Welcome to
+                    <span style="color: blue;">i</span>
+                    <span style="color: green;">U</span>
+                    <span style="color: red;">N</span>
+                    <span style="color: yellow;">O</span>
+                    !
+                </h1>
+                <img src="images/logo.png" alt="iUNO">
+            </header>
+            <br><br><br><br><br>
+            <main>
+                <section id="login_section">
+                    <div class="box">
+                        <h2>Login</h2>
+                        <br>
+                        <hr>
+                        <br>
+                        <input type="text" placeholder="Your name..." id="name" class="input-t">
+                        <br>
+                        <br>
+                        <span id="upload_row">
+                            <label style="margin-right: 35px;">Choose your profile picture:</label>
+                            <input type="file" style="content: 'Upload profile Picture';" accept="image/*"
+                                onchange="loadFile(event)">
+                            <img id="output"
+                                style="border:black 3px solid; width: 50px; height:50px;border-radius: 25px;object-fit: contain;"
+                                src="https://img.icons8.com/color/2x/test-account.png" />
+                        </span>
+                        <br>
+                        <label>Captcha</label>
+                        <br><br>
+                        <b style="font-size: 22px; margin-right: 25px;" id="captcha_text"></b>
+                        <input type="text" placeholder="Enter what you see." id="captcha_entry" class="input-t">
+                        <br>
+                        <br>
+                        <input type="checkbox" id="" title="Save details" checked="true">
+                        <label>Save details</label>
+                        <br>
+                        <br>
+                        <button id="btn" onclick="login()">Login</button>
+                    </div>
+                </section>
+                <section id="game_section">
+                    
+                </section>
+            </main>
+        </div>
+
+    </center>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
