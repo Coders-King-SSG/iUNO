@@ -10,6 +10,15 @@
 </head>
 
 <body onload="splash()">
+    <button class="exit" onclick="exit()" style="background:rgb(201, 83, 83);
+                border-radius: 15px;
+                padding: 5px;
+                position: fixed;
+                bottom: 20px;
+                right: 10px;
+                font-size: 30px;
+                color: #fee8d6;
+                border-color: rgb(255, 0, 0);">&RightArrowBar; Exit Game</button>
     <center>
         <div id="login-div">
             <header>
@@ -31,11 +40,12 @@
                         <br>
                         <hr>
                         <br>
-                        <input type="text" placeholder="Your name..." id="name" class="input-t">
+                        <input type="text" required placeholder="Your name..." id="name" class="input-t">
                         <br>
-                        <br>
+                        <br><label>Choose your profile picture:</label>
                         <span id="upload_row">
-                            <label style="margin-right: 35px;">Choose your profile picture:</label>
+
+
                             <input type="file" style="content: 'Upload profile Picture';" accept="image/*"
                                 onchange="loadFile(event)">
                             <img id="output"
@@ -49,23 +59,50 @@
                         <input type="text" placeholder="Enter what you see." id="captcha_entry" class="input-t">
                         <br>
                         <br>
-                        <input type="checkbox" id="" title="Save details" checked="true">
+                        <input type="checkbox" id="save" title="Save details" checked="true">
                         <label>Save details</label>
                         <br>
                         <br>
                         <button id="btn" onclick="login()">Login</button>
                     </div>
+                    <br><br><br>
                 </section>
-                <section id="game_section">
-                    
+                <section id="game_section" style="width:85%;">
+
+                    <div class="box">
+                        <div class="tabs">
+                            <div class="tab">You (<span id="player_name"></span>) <img src="" alt="" id="you_dp"></div>
+                            <div class="tab">Opp (<span id="opp_name"></span>) <img src="" alt="" id="you_dp"></div>
+                        </div>
+                        <div class="loader" id="loader"></div>
+                        <div class="cards_section" style="display: none;">
+                            <div class="my_cards"
+                                style="display:flex;flex-wrap:wrap;align-items: center; justify-content: center;"><img
+                                    src="images/uno_backface.png" id="my_card_0" style="width: 60px;"  alt="">
+                                <img src="images/uno_backface.png" id="my_card_1" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="my_card_2" style="width: 60px;"  alt=""><img
+                                    src="images/uno_backface.png" id="my_card_3" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="my_card_4" style="width: 60px;"  alt=""><img
+                                    src="images/uno_backface.png" id="my_card_5" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="my_card_6" style="width: 60px;"  alt="">
+                            </div>
+                            
+                            <img src="images/uno_backface.png" style="width: 100px;" alt="">
+                            <div class="opp_cards"
+                                style="display:flex; flex-wrap: wrap;align-items: center; justify-content: center;">
+                                <img src="images/uno_backface.png" id="opp_card_1" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="opp_card_2" style="width: 60px;"  alt=""><img
+                                    src="images/uno_backface.png" id="opp_card_3" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="opp_card_4" style="width: 60px;"  alt=""><img
+                                    src="images/uno_backface.png" id="opp_card_5" style="width: 60px;"  alt=""><img src="images/uno_backface.png" id="opp_card_6" style="width: 60px;"  alt=""><img
+                                    src="images/uno_backface.png" id="opp_card_7" style="width: 60px;"  alt="">
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>
 
     </center>
-    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <!--Firebase Libraries-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
     <script src="main.js"></script>
 </body>
 

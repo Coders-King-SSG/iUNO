@@ -48,6 +48,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+  width:100%;
 }
 .box {
     background-color: #fee8d6;
@@ -55,7 +56,7 @@ header h1 {
     padding: 20px;
     border-radius: 25px;
     margin: 0px!important;
-    width: 65%;
+    width: 85%;
     height: 65%;
 }
 
@@ -71,6 +72,18 @@ main {
     font-family: 'Limelight', cursive;
 }
 
+.tabs {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom:3px solid #344
+}
+
+#output {
+    margin:0px!important;
+}
+
 #btn {
     background:rgb(105, 184, 86);
     border-radius: 15px;
@@ -78,4 +91,40 @@ main {
     font-size: 30px;
     color: #fee8d6;
     border-color: rgb(79, 138, 65);
+}
+
+#game_section {
+    display: none;
+} 
+
+
+.loader {
+    border-style: solid;
+    border-width: 8px;
+    border-right-color: gray;
+    border-left-color: gray;
+    border-top-color: cornflowerblue;
+    border-bottom-color: cornflowerblue;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tab {
+    padding:10px 20px 10px 20px;
+    border: 3px solid #344;
+    border-bottom-width: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 30px;
 }
